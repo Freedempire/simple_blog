@@ -52,7 +52,8 @@ def admin_only(func):
 
 
 app = Flask(__name__)
-app.config.from_object('config.DevelopmentConfig')
+# app.config.from_object('config.DevelopmentConfig')
+app.config.from_object('config.ProductionConfig')
 
 Bootstrap5(app)
 ckeditor = CKEditor(app)
